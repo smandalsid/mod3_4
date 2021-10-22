@@ -1,0 +1,11 @@
+synchronization(lock) is to control the access of multiple threads using shared resources.
+
+it helps to maintain consistency
+it prevents thread interferance
+
+types of synchronization
+1. mutual exclusion vs join() no lock and release
+    a. synchronized method
+    b. synchronized block
+    c. static synchronization set of 
+3. inter thread communication

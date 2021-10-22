@@ -1,0 +1,18 @@
+when a process is accessing a shared variable, the process is said to be in a critical section
+
+no two processes can be in the same CS at the same time. the is called mutual exclusion
+
+
+multitasking ->
+
+    1) process -> heavyweight , own memory of all the processes, if there are n processes there will be n different memory, there needs to be context switching(to transfer from one state to another) which takes more time
+    2) Thread(java) -> lightweight, shared memory, thus context switching takes very less time as data is shared.
+
+thread life cycle->
+
+following are the different states
+1) new
+2) active/runnable/running
+3) blocked/waiting
+4) end
+

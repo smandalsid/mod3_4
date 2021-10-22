@@ -1,0 +1,39 @@
+file handling
+
+flow of the data
+in java we refer a stream as sequence of bytes, data, character, datatype
+
+step1: open the file
+step2; read or write
+step3: operation on file data
+step4: closed the open file
+
+we need the java.io.* package which has all the classes
+
+1. File class(java.io.File) through this package we get information about File class    
+    name of file
+    file location
+    size
+    last access/last modified
+    readable or not
+
+we should also handle exceptions while handling with files, files can be missing or some stupid thing can happen and thus flow will get disrupted.
+
+FileReader-> character, fp.read()single character, fp.read(char[] or String)sequence of char[], String
+FileWriter-> character, fp.write(char), f.write(char[] or String)
+raw data (binary data) eg. .exe, .obj files, .class, .jpg:byte format
+
+FileInputStream-> byte
+FileOutputStream->byte, 
+
+DataInputStream->primitive data types(read as int, long, double, ..)
+DataOutputStream-> primitve data types
+
+BufferedInputStream->
+BufferOuputStream->
+these two are faster compared to the other file classes in java.io class
+
+common function supported in the above class
+input-> available(), read(), read(array of data), read(array of data, offset, length), close(), skip(+ve number of characters to skip), skip(-ve)->read skip(1)<length of the file.
+
+output-> write(char/byte/int), write (array of data)    

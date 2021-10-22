@@ -1,0 +1,34 @@
+// interface is similar to class but we dont give the definition for some function we just give the prototype, whoever uses the function should define the function how it would work
+
+// though runnable interface supports multithreading we cannot use parallelism without creating thread objects
+
+
+interface person {
+    String name, address;
+    int age;
+    void get_person_info(String n, String a, int x);
+    // {
+    //     name=n;
+    //     address=a;
+    //     age=x;
+    // }
+    void show_person_info();
+    // {
+    //     System.out.println("Person name: "+name);
+    //     System.out.println("Person address: "+address);
+    //     System.out.println("Person age: "+age);
+    // }
+}
+
+class student implements person {
+    void get_person_info()
+    {
+        S.o.p(n+a+x); // developer 1
+        // depends on the developer what they want to do.
+    }
+    void get_person_info()
+    {
+        s.o.p(x+a+n); // developer 2
+        // depends on the developer what they want to do.
+    }
+}

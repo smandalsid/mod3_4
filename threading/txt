@@ -1,0 +1,41 @@
+[Monday 14:53] Naveen Kumar  N
+    getName(),setName(),Thread.currentThread(), this and sleep() example
+​[Monday 14:53] Naveen Kumar  N
+    
+class parallel_program extends Thread
+{​​​​​​​
+public void run()  //parallel logics  //runnable state
+{​​​​​​​
+for(int i=0;i<5;i++) 
+{​​​​​​​
+//System.out.println(i+" "+this.getId()+" "+ this.getName());   //blocking the thread/waiting
+try
+{​​​​​​​
+Thread.sleep(100,46);
+}​​​​​​​
+catch(InterruptedException e)
+{​​​​​​​
+System.out.println(e.getMessage());
+}​​​​​​​
+System.out.println(i+" "+Thread.currentThread().getId()+" "+ Thread.currentThread().getName());
+}​​​​​​​
+}​​​​​​​  //end state
+public static void main(String args[])
+{​​​​​​​
+parallel_program obj=new parallel_program();  //create an object current class 
+parallel_program obj1=new parallel_program();
+System.out.println(obj.getName());
+System.out.println(obj1.getName());
+obj.setName("T1");
+obj1.setName("T2");
+obj.start();  //New-State of the thread, will try to execute (public void) run()--Runnable state
+            //obj.run();//will become normal method/function
+obj1.start(); 
+}​​​​​​​
+
+
+}​​​​​​​
+
+
+
+<https://teams.microsoft.com/l/message/19:Pn8TMPz0hL8VQRKjeBCsTtdXLjMpeCn_0sSqlGyzHNo1@thread.tacv2/1633339384913?tenantId=d4963ce2-af94-4122-95a9-644e8b01624d&amp;groupId=d9a31b2d-b057-40f3-8fa8-70c265428606&amp;parentMessageId=1627814387965&amp;teamName=Java Programming - CSE1007_A2+TA2_SJT521_FALL2021-22&amp;channelName=General&amp;createdTime=1633339384913>
